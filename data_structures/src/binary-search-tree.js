@@ -7,12 +7,16 @@ class BinarySearchTree {
 
   depthFirstForEach(cb) {
     /* Your code here */
-    
+    const depthFirst = (node) => {
+      cb(node.value) 
+      if(node.left !== null) depthFirst(node.left) // Checks to see if the left side of node is empty
+      if(node.right !== null) depthFirst(node.right) // Checks to see if the right side of node is empty
+    }
+    depthFirst(this)
   }
 
   breadthFirstForEach(cb) {
     /* Your code here */
-
   }
 
   insert(value) {
