@@ -8,15 +8,23 @@ class BinarySearchTree {
   depthFirstForEach(cb) {
     /* Your code here */
     const depthFirst = (node) => {
-      cb(node.value) 
-      if(node.left !== null) depthFirst(node.left) // Checks to see if the left side of node is empty
-      if(node.right !== null) depthFirst(node.right) // Checks to see if the right side of node is empty
+      cb(node.value) // Add root value first
+      if(node.left !== null) depthFirst(node.left) // Checks left side of node
+      if(node.right !== null) depthFirst(node.right) // Checks right side of node
     }
-    depthFirst(this)
+    depthFirst(this);
   }
 
   breadthFirstForEach(cb) {
     /* Your code here */
+    const queue = []; // Create a queue
+    queue.push(this); // Pushes in the root + first level
+    while (queue.length !== 0) {
+      let node = queue.shift(); // As it shifts it contains root, left, right, 2nd level left, 2nd level right, etc.
+      cb(node.value) // Add the values as each node gets shifted
+      if (node.left !== null) queue.push(node.left) // Checks left side of node
+      if (node.right !== null) queue.push(node.right) // Checks right side of node
+    }
   }
 
   insert(value) {

@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn jest --test
+  /usr/local/bin/node /usr/local/bin/yarn jest --watch
 
 PATH: 
   /Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin
@@ -47,9 +47,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit signal: SIGABRT
   Command: sh
-  Arguments: -c /Users/kevintan/git/Week14-Data_Structures/Sprint-Challenge--Data-Structures-Algorithms/node_modules/.bin/jest --test
+  Arguments: -c /Users/kevintan/git/Week14-Data_Structures/Sprint-Challenge--Data-Structures-Algorithms/node_modules/.bin/jest --watch
   Directory: /Users/kevintan/git/Week14-Data_Structures/Sprint-Challenge--Data-Structures-Algorithms
   Output:
   
