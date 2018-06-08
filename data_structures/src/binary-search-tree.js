@@ -1,4 +1,4 @@
-class BinarySearchTree {
+  class BinarySearchTree {
   constructor(value) {
     this.value = value;
     this.left = null;
