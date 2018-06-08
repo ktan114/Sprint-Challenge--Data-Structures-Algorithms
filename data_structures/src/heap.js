@@ -1,6 +1,19 @@
 const heapsort = (arr) => {
   /* Your code here */
-  
+  const heap = new Heap(); // initialize a heap
+  // console.log(arr)
+  arr.map(item => {
+    heap.insert(item) // Adds the items in the array to the heap
+  })
+  // console.log(heap)
+  let temp = 0; 
+  const newHeap = [];
+  while (heap.getSize() > 0) { // .getSize() or use heap.storage.length
+    temp = heap.delete(); // Begins to remove last item from array
+    newHeap.unshift(temp) // Inserts the value to beginning of array
+  }
+  // console.log(newHeap)
+  return newHeap;
 };
 
 
